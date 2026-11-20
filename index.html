@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Wins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+
+    <!-- Motivational speech -->
+    <section class="speech" aria-labelledby="speech-title">
+      <p class="eyebrow" id="today">Today</p>
+      <h1 id="speech-title">You've got this.</h1>
+      <p>
+    YOU CAN DO EVERYDAY!
+      </p>
+    </section>
+
+    <!-- Add a task -->
+    <form class="add" id="add-form" autocomplete="off">
+      <input type="text" id="task-input" placeholder="What do you want to get done?" aria-label="New task" maxlength="120">
+      <button type="submit" class="btn-add">Add task</button>
+    </form>
+    <p class="error" id="error" role="alert"></p>
+
+    <!-- Progress -->
+    <div>
+      <div class="progress-row">
+        <span><strong id="count">0 of 0</strong> done</span>
+        <span id="progress-note"></span>
+      </div>
+      <div class="bar" aria-hidden="true"><span id="bar-fill"></span></div>
+    </div>
+
+    <!-- Task list (filled in by script.js) -->
+    <ul id="list" aria-label="Your tasks"></ul>
+    <p class="hint">Tick a task when it is finished. A Delete button appears once it is done.</p>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
